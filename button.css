@@ -1,0 +1,112 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #c5c9dc;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0.4px rgba(128, 128, 128, 0.109);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+.login-form h1{
+    margin: 0 0 24px 0;
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+}
+.form-input-material{
+    position: relative;
+    margin: 12px 0;
+    width: 100%;
+}
+.form-input-material input{
+    width: calc(100%-30px);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+
+}
+.form-input-material label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 0.15em;
+    color: wheat;
+    transition: 0.3s;
+}
+.form-input-material input:focus + label,
+.form-input-material_input:not(:placeholder-shown)+ label{
+    top: -10px;
+    left: 10px;
+    font-size: 0.75s;
+    color: #ffffff;
+}
+.btn{
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-colr 0.3s, box-shadow 0.3s;
+    width: 100%;
+    text-align: center;
+}
+.btn::before{
+    position: relative;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120kg,
+        transparent,
+        var(--primary-color),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: 0.6s;
+}
+.btn:hover{
+    background: transparent;
+    box-shadow: 0 0 20px 10px rgb(90, 90, 235);
+}
+.btn:hover::before{
+    transform: translateX(100%);
+}
+.btn-primary {
+    --primary-color: #007bff;
+}
+.btn-ghost{
+    background: transparent;
+    border: 2px solid #007bff;
+
+}
+.btn-ghost:hover{
+    background-color: #1b5597;
+    color:white
+}
